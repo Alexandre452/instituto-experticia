@@ -63,7 +63,7 @@ const Navbar = () => {
 
                     {/* MENU DESKTOP */}
                     <ul className="desktop-menu">
-                        <li><Link to="/" className='link'>s Principal</Link></li>
+                        <li><Link to="/" className='link'>Página Principal</Link></li>
 
                         {secciones.map(s => (
                             <li key={s.id}>
@@ -84,6 +84,7 @@ const Navbar = () => {
 
                         <div className='dropdown'>
                             <p><Link to="/crear-seccion">+ Crear sección</Link></p>
+                            <br />
                             <p onClick={logout}>Salir de Experticia</p>
                         </div>
                     </div>

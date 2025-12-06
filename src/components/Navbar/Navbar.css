@@ -41,7 +41,7 @@
    HAMBURGER BUTTON (mobile)
 ------------------------------------------------------ */
 .menu-btn{
-    width: 35px;
+    width: 2px;
     cursor: pointer;
     display: none;
 }
@@ -142,6 +142,9 @@
         display: none;
     }
     .menu-btn{
+        height: 40px;
         display: block;
+        
+        
     }
 }
