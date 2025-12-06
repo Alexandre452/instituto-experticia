@@ -1,3 +1,6 @@
+/* ------------------------------------------------------
+   NAVBAR GENERAL
+------------------------------------------------------ */
 .navbar{
     width: 100%;
     padding: 20px 6%;
@@ -7,30 +10,45 @@
     font-size: 18px;
     color: #e5e5e5;
     background-image: linear-gradient(180deg, rgba(0,0,0,0.7) 10%, transparent);
-    z-index: 1;
+    z-index: 100;
 }
-
+.nav-dark{
+    background: #141414;
+}
 
 .navbar-left{
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 40px;
 }
 .navbar-left img{
     width: 90px;
 }
 
-.navbar-left ul{
+.desktop-menu{
     display: flex;
     list-style: none;
     gap: 20px;
 }
 
-.navbar-left ul li{
-    cursor: pointer;
+.link{
     text-decoration: none;
+    color: white;
+    font-size: 18px;
 }
 
+/* ------------------------------------------------------
+   HAMBURGER BUTTON (mobile)
+------------------------------------------------------ */
+.menu-btn{
+    width: 35px;
+    cursor: pointer;
+    display: none;
+}
+
+/* ------------------------------------------------------
+   RIGHT
+------------------------------------------------------ */
 .navbar-right{
     display: flex;
     gap: 20px;
@@ -55,47 +73,75 @@
     position: absolute;
     top: 100%;
     right: 0;
-    width: max-content;
     background: #191919;
     padding: 18px 22px;
     border-radius: 2px;
-    text-decoration: underline;
-    z-index: 1;
+    z-index: 10;
     display: none;
 }
-
-.navbar .dropdown p{
-    font-size: 13px;
-    cursor: pointer;
-}
-
 .navbar-profile:hover .dropdown{
     display: block;
 }
-.nav-dark{
-    background: #141414;
+
+/* ------------------------------------------------------
+   OVERLAY BLUR (fondo borroso)
+------------------------------------------------------ */
+.menu-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(8px);
+    background: rgba(0,0,0,0.4);
+    z-index: 90;
 }
-@media (max-width:800px){
-    .navbar{
-        padding: 20px 4%;
-    }
-    .navbar-left ul{
-        display: none;
-    }
-    .navbar img{
-        height: 25px;
-    }
+
+/* ------------------------------------------------------
+   MOBILE SLIDE MENU
+------------------------------------------------------ */
+.mobile-menu{
+    position: fixed;
+    top: 0;
+    left: -260px;
+    width: 260px;
+    height: 100%;
+    background: #111;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: 0.3s ease;
+    z-index: 200;
 }
-@media (max-width:500px){
-    .navbar img{
-        height: 20px;
-    }
-    .navbar-right{
-        gap: 10px;
-    }
+.mobile-menu.open{
+    left: 0;
 }
-.link{
+
+.mobile-menu a{
     text-decoration: none;
     color: white;
     font-size: 18px;
+}
+.mobile-menu p{
+    color: white;
+    cursor: pointer;
+}
+
+.close-btn{
+    width: 35px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------
+   RESPONSIVE
+------------------------------------------------------ */
+@media (max-width:800px){
+    .desktop-menu{
+        display: none;
+    }
+    .menu-btn{
+        display: block;
+    }
 }
