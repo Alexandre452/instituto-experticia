@@ -76,7 +76,6 @@ const Navbar = () => {
                 {/* Right */}
                 <div className="navbar-right">
                     <img src={search_icon} className='icons' alt="buscar" />
-                    <p>Children</p>
 
                     <div className="navbar-profile">
                         <img src={profile_img} className='profile' alt="perfil" />
