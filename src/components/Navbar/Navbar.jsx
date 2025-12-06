@@ -63,7 +63,7 @@ const Navbar = () => {
 
                     {/* MENU DESKTOP */}
                     <ul className="desktop-menu">
-                        <li><Link to="/" className='link'>Págna Principal</Link></li>
+                        <li><Link to="/" className='link'>Página Principal</Link></li>
 
                         {secciones.map(s => (
                             <li key={s.id}>
