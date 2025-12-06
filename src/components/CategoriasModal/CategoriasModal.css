@@ -1,0 +1,168 @@
+/* Overlay y modal centrado */
+.cat-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1200;
+}
+
+.cat-modal {
+  width: 900px;
+  max-width: 95%;
+  max-height: 90%;
+  background: #0f1720;
+  color: #fff;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Close en la esquina */
+.cat-close {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Body con sidebar + content */
+.cat-body {
+  display: flex;
+  gap: 14px;
+  margin-top: 8px;
+  height: calc(100% - 50px);
+}
+
+.cat-sidebar {
+  width: 34%;
+  border-right: 1px solid rgba(255,255,255,0.06);
+  padding-right: 12px;
+  overflow: auto;
+}
+
+.cat-content {
+  width: 66%;
+  padding-left: 12px;
+  overflow: auto;
+}
+
+/* Lista de categorias */
+.cat-list {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+}
+
+.cat-list li {
+  padding: 8px 6px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: background .15s;
+}
+
+.cat-list li.active, .cat-list li:hover {
+  background: rgba(255,255,255,0.03);
+}
+
+.cat-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cat-title {
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* Buttons */
+.btn-add {
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cat-actions button,
+.item-actions button {
+  background: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin-left: 6px;
+}
+
+/* Items list */
+.items-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 8px;
+}
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 6px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  background: rgba(255,255,255,0.02);
+}
+
+/* Small modal */
+.small-modal-overlay {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1300;
+}
+
+.small-modal {
+  width: 420px;
+  background: #0b1220;
+  color: #fff;
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.6);
+}
+
+.small-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.small-modal-body {
+  margin-top: 10px;
+}
+
+.small-modal input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: none;
+  margin-top: 6px;
+}
+
+.close-small {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}

@@ -1,0 +1,79 @@
+/* Contenedor principal de la sección */
+.seccion-container {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Título de la sección */
+.seccion-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Botón de crear subsección */
+.add-sub-btn {
+  padding: 10px 14px;
+  background: #000000;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: inline-block;
+  border: none;
+  font-size: 20px;
+}
+.add-sub-btn:hover {
+  background: #000000;
+}
+.btn-create {
+  padding: 10px 14px;
+  background: #000000;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: inline-block;
+  border: none;
+}
+.btn-create:hover {
+  background: #34922d;
+}
+
+.edit-btn {
+  padding: 10px 14px;
+  background: #000000;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: inline-block;
+  border: none;
+}
+.edit-btn:hover {
+  background: #1d8faf;
+}
+
+.btn-danger {
+  padding: 10px 14px;
+  background: #000000;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: inline-block;
+  border: none;
+  font-size: 20px;
+}
+.btn-danger:hover {
+  background: #9f2a2a;
+}
+
+/* Listado de subsecciones */
+.subsecciones-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
