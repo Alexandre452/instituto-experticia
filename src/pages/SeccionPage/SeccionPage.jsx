@@ -118,7 +118,35 @@ const SeccionPage = () => {
 
   return (
     <div className="seccion-page">
-      <h1>{seccion.titulo}</h1>
+      <div className="seccion-header">
+        <h1>{seccion.titulo}</h1>
+
+        <div className="section-actions">
+          <button
+            className="btn-edit"
+            onClick={() => {
+              const nuevo = prompt("Nuevo título:", seccion.titulo);
+              if (nuevo && nuevo.trim()) {
+                setDoc(doc(db, "secciones", id), { titulo: nuevo.trim() }, { merge: true });
+              }
+            }}
+          >
+            ✏ Editar
+          </button>
+
+          <button
+            className="btn-danger"
+            onClick={async () => {
+              if (!window.confirm("¿Eliminar esta sección y TODO su contenido?")) return;
+              await deleteDoc(doc(db, "secciones", id));
+              navigate("/"); // volver a la lista de secciones
+            }}
+          >
+            🗑 Eliminar
+          </button>
+        </div>
+      </div>
+
 
       {/* Crear subsección */}
       <button className="add-sub-btn" onClick={() => setShowSubModal(true)}>

@@ -5,7 +5,7 @@ import {login, signup} from '../../firebase'
 import spinner from '../../assets/spinner.gif'
 
 const Login = () => {
-  const [signState, setSignState] = useState("Sign In");
+  const [signState, setSignState] = useState("Ingresar");
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
@@ -14,7 +14,7 @@ const Login = () => {
   const user_auth = async (event) =>{
     event.preventDefault();
     setLoading(true)
-    if(signState==="Sign In"){
+    if(signState==="Ingresar"){
       await login(email, password);
     }else{
       await signup(name, email, password)
@@ -41,15 +41,15 @@ const Login = () => {
           <div className="form-help">
             <div className="remember">
               <input type="checkbox" />
-              <label htmlFor="">Remember Me</label>
+              <label htmlFor="">Recuérdame</label>
             </div>
-            <p>Need Help?</p>
+            <p>¿Necesita Ayuda?</p>
           </div>
         </form>
         <div className='form-switch'>
-          {signState==="Sign In"?
+          {signState==="Ingresar"?
           <p>Nuevo en Experticia <span onClick={()=> setSignState("Sign Up")}>Sign Up Now</span></p>
-          :<p>Con una cuenta <span onClick={()=> setSignState("Sign In")}>Sign In Now</span></p>}
+          :<p>Con una cuenta <span onClick={()=> setSignState("Ingresar")}>Ingresar ahora</span></p>}
           
           
         </div>
