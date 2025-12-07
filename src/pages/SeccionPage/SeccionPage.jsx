@@ -158,15 +158,36 @@ const SeccionPage = () => {
           <div className="sub-card" key={sub.id}>
             <div className="sub-header">
               <h3>{sub.titulo}</h3>
+
               <div className="sub-actions">
+
+                {/* ✏️ EDITAR SUBSECCIÓN */}
+                <button
+                  className="btn-edit"
+                  onClick={() => {
+                    const nuevo = prompt("Nuevo nombre de la subsección:", sub.titulo);
+                    if (nuevo && nuevo.trim()) {
+                      setDoc(
+                        doc(db, "secciones", id, "subsecciones", sub.id),
+                        { titulo: nuevo.trim() },
+                        { merge: true }
+                      );
+                    }
+                  }}
+                >
+                  ✏ Editar
+                </button>
+
+                {/* 🗑 ELIMINAR SUBSECCIÓN */}
                 <button
                   className="btn-danger"
                   onClick={() => handleDeleteSubsection(sub.id)}
                 >
-                  🗑 Eliminar subsección
+                  🗑 Eliminar
                 </button>
               </div>
             </div>
+
 
             {/* TitleCards para listar contenidos */}
             <TitleCards
