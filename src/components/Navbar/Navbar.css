@@ -9,7 +9,7 @@
     position: fixed;
     font-size: 18px;
     color: #e5e5e5;
-    background-image: linear-gradient(180deg, rgba(0,0,0,0.7) 10%, transparent);
+    background-image: linear-gradient(180deg, rgba(15,16,227) 10%, transparent);
     z-index: 100;
 }
 .nav-dark{

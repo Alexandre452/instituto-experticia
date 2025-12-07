@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from 'react';
 import './Navbar.css';
-import Logo from '../../assets/Logo.jpg';
+import Logo from '../../assets/logois.png';
 import search_icon from '../../assets/busqueda.svg';
-import profile_img from '../../assets/perfil.svg';
+import profile_img from '../../assets/profile.png';
 import caret_icon from '../../assets/caret.svg';
 import menu_icon from '../../assets/menu.svg';  // <-- Añade un icono hamburguesa
 import close_icon from '../../assets/close.svg'; // <-- Icono para cerrar

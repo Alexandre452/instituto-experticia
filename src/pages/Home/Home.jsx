@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './Home.css';
 import Navbar from '../../components/Navbar/Navbar';
-import hero_banner from '../../assets/diapo.png';
+import hero_banner from '../../assets/cubo.png';
 import TitleCardsPreview from '../../components/TitleCardsPreview/TitleCardsPreview';
 import Footer from '../../components/Footer/Footer';
 import { db } from "../../firebase";
